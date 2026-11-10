@@ -1,5 +1,6 @@
 #include "cpu.h"
 #include "cpu_instructions.h"
+#include "emulator_core.h"
 #include "cart.h"
 #include <stddef.h>
 #include <stdio.h>
@@ -36,11 +37,16 @@ bool cpu_execute_instruction()
         const gb_cpu_instruction* instruction = &instructions[cpu_current_op_code];
         const uint8_t pchi = ((cpu_registers.pc-1) & 0xFF00) >> 8;
         const uint8_t pclo = ((cpu_registers.pc-1) & 0xFF);
-        printf("Unknown instruction at %02X %02X (%s), count: %i\n", pchi, pclo, instruction->disassembly, cpu_instuction_counter);
+        printf("Unknown instruction %02X at %02X%02X (%s), count: %i\n", cpu_current_op_code, pchi, pclo, instruction->disassembly, cpu_instuction_counter);
         return false;
     }
 
     // Execute the instruction
     ((cpu_execute_op)cpu_current_instruction_execute)();
     return true;
+}
+
+void cpu_noop()
+{
+    core_advance_clocks(4);
 }

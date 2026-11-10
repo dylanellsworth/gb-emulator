@@ -52,4 +52,7 @@ void cpu_reset();
 void cpu_fetch_instruction();
 bool cpu_execute_instruction();
 
+// CPU Operations
+void cpu_noop(); // 0x00
+
 #endif // CPU_H

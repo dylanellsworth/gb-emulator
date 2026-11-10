@@ -1,8 +1,9 @@
 #include "cpu_instructions.h"
+#include "cpu.h"
 #include <stddef.h>
 
 const gb_cpu_instruction instructions[256] = {
-    {"NOP", 0, NULL}, // 0x00
+    {"NOP", 0, cpu_noop}, // 0x00
     {"LD BC,u16", 0, NULL}, // 0x01
     {"LD (BC),A", 0, NULL}, // 0x02
     {"INC B", 0, NULL}, // 0x03
