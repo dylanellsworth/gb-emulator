@@ -1,8 +1,8 @@
-#include <stdint.h>
-#include <stdbool.h>
-
 #ifndef CART_H
 #define CART_H
+
+#include <stdint.h>
+#include <stdbool.h>
 
 #define MAX_CART_SIZE  (8 * 1024 * 1024)
 extern uint8_t cartridge_data[MAX_CART_SIZE];
