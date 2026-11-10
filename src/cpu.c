@@ -50,3 +50,19 @@ void cpu_noop()
 {
     core_advance_clocks(4);
 }
+
+void cpu_jp_u16()
+{
+    core_advance_clocks(4);
+    // Get jump address MSB
+    uint32_t temp = cartridge_data[cpu_registers.pc++];
+    cpu_registers.pc &= 0xFFFF;
+    core_advance_clocks(4);
+    // get jump address LSB
+    temp |= ((uint32_t)cartridge_data[cpu_registers.pc++]) << 8;
+    cpu_registers.pc &= 0xFFFF;
+    core_advance_clocks(4);
+    // Set PC to jump address
+    cpu_registers.pc = temp;
+    core_advance_clocks(4);
+}

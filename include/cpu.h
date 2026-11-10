@@ -54,5 +54,6 @@ bool cpu_execute_instruction();
 
 // CPU Operations
 void cpu_noop(); // 0x00
+void cpu_jp_u16(); //C3
 
 #endif // CPU_H

@@ -6,67 +6,67 @@ const gb_cpu_instruction instructions[256] = {
     {"NOP", 0, cpu_noop}, // 0x00
     {"LD BC,u16", 0, NULL}, // 0x01
     {"LD (BC),A", 0, NULL}, // 0x02
-    {"INC B", 0, NULL}, // 0x03
-    {"DEC B", 0, NULL}, // 0x04
-    {"LD B,u8", 0, NULL}, // 0x05
-    {"RLCA", 0, NULL}, // 0x06
-    {"LD (u16),SP", 0, NULL}, // 0x07
-    {"???", 0, NULL}, // 0x08
-    {"???", 0, NULL}, // 0x09
-    {"???", 0, NULL}, // 0x0A
-    {"???", 0, NULL}, // 0x0B
-    {"???", 0, NULL}, // 0x0C
-    {"???", 0, NULL}, // 0x0D
-    {"???", 0, NULL}, // 0x0E
-    {"???", 0, NULL}, // 0x0F
-    {"???", 0, NULL}, // 0x10
-    {"???", 0, NULL}, // 0x11
-    {"???", 0, NULL}, // 0x12
-    {"???", 0, NULL}, // 0x13
-    {"???", 0, NULL}, // 0x14
-    {"???", 0, NULL}, // 0x15
-    {"???", 0, NULL}, // 0x16
-    {"???", 0, NULL}, // 0x17
-    {"???", 0, NULL}, // 0x18
-    {"???", 0, NULL}, // 0x19
-    {"???", 0, NULL}, // 0x1A
-    {"???", 0, NULL}, // 0x1B
-    {"???", 0, NULL}, // 0x1C
-    {"???", 0, NULL}, // 0x1D
-    {"???", 0, NULL}, // 0x1E
-    {"???", 0, NULL}, // 0x1F
-    {"???", 0, NULL}, // 0x20
-    {"???", 0, NULL}, // 0x21
-    {"???", 0, NULL}, // 0x22
-    {"???", 0, NULL}, // 0x23
-    {"???", 0, NULL}, // 0x24
-    {"???", 0, NULL}, // 0x25
-    {"???", 0, NULL}, // 0x26
-    {"???", 0, NULL}, // 0x27
-    {"???", 0, NULL}, // 0x28
-    {"???", 0, NULL}, // 0x29
-    {"???", 0, NULL}, // 0x2A
-    {"???", 0, NULL}, // 0x2B
-    {"???", 0, NULL}, // 0x2C
-    {"???", 0, NULL}, // 0x2D
-    {"???", 0, NULL}, // 0x2E
-    {"???", 0, NULL}, // 0x2F
-    {"???", 0, NULL}, // 0x30
-    {"???", 0, NULL}, // 0x31
-    {"???", 0, NULL}, // 0x32
-    {"???", 0, NULL}, // 0x33
-    {"???", 0, NULL}, // 0x34
-    {"???", 0, NULL}, // 0x35
-    {"???", 0, NULL}, // 0x36
-    {"???", 0, NULL}, // 0x37
-    {"???", 0, NULL}, // 0x38
-    {"???", 0, NULL}, // 0x39
-    {"???", 0, NULL}, // 0x3A
-    {"???", 0, NULL}, // 0x3B
-    {"???", 0, NULL}, // 0x3C
-    {"???", 0, NULL}, // 0x3D
-    {"???", 0, NULL}, // 0x3E
-    {"???", 0, NULL}, // 0x3F
+    {"INC BC", 0, NULL}, // 0x03
+    {"INC B", 0, NULL}, // 0x04
+    {"DEC B", 0, NULL}, // 0x05
+    {"LD B,u8", 0, NULL}, // 0x06
+    {"RCLA", 0, NULL}, // 0x07
+    {"LD (u16),SP", 0, NULL}, // 0x08
+    {"ADD HL,BC", 0, NULL}, // 0x09
+    {"LD A, (BC)", 0, NULL}, // 0x0A
+    {"DEC BC", 0, NULL}, // 0x0B
+    {"INC C", 0, NULL}, // 0x0C
+    {"DEC C", 0, NULL}, // 0x0D
+    {"LD C,u8", 0, NULL}, // 0x0E
+    {"RRCA", 0, NULL}, // 0x0F
+    {"STOP", 0, NULL}, // 0x10
+    {"LD DE,u16", 0, NULL}, // 0x11
+    {"LD (DE),A", 0, NULL}, // 0x12
+    {"INC DE", 0, NULL}, // 0x13
+    {"INC D", 0, NULL}, // 0x14
+    {"DEC D", 0, NULL}, // 0x15
+    {"LD D,u8", 0, NULL}, // 0x16
+    {"RLA", 0, NULL}, // 0x17
+    {"JR i8", 0, NULL}, // 0x18
+    {"ADD HL,DE", 0, NULL}, // 0x19
+    {"LD A,(DE)", 0, NULL}, // 0x1A
+    {"DEC DE", 0, NULL}, // 0x1B
+    {"INC E", 0, NULL}, // 0x1C
+    {"DEC E", 0, NULL}, // 0x1D
+    {"LD E,u8", 0, NULL}, // 0x1E
+    {"RRA", 0, NULL}, // 0x1F
+    {"JR NZ,i8", 0, NULL}, // 0x20
+    {"LD HL,u16", 0, NULL}, // 0x21
+    {"LD (HL+),A", 0, NULL}, // 0x22
+    {"INC HL", 0, NULL}, // 0x23
+    {"INC H", 0, NULL}, // 0x24
+    {"DEC H", 0, NULL}, // 0x25
+    {"LD H,u8", 0, NULL}, // 0x26
+    {"DAA", 0, NULL}, // 0x27
+    {"JR Z,i8", 0, NULL}, // 0x28
+    {"ADD HL,HL", 0, NULL}, // 0x29
+    {"LD A,(HL+)", 0, NULL}, // 0x2A
+    {"DEC HL", 0, NULL}, // 0x2B
+    {"INC L", 0, NULL}, // 0x2C
+    {"DEC L", 0, NULL}, // 0x2D
+    {"LD L,u8", 0, NULL}, // 0x2E
+    {"CPL", 0, NULL}, // 0x2F
+    {"JR NC,i8", 0, NULL}, // 0x30
+    {"LD SP,u16", 0, NULL}, // 0x31
+    {"LD (HL-),A", 0, NULL}, // 0x32
+    {"INC SP", 0, NULL}, // 0x33
+    {"INC (HL)", 0, NULL}, // 0x34
+    {"DEC (HL)", 0, NULL}, // 0x35
+    {"LD (HL),u8", 0, NULL}, // 0x36
+    {"SCF", 0, NULL}, // 0x37
+    {"JF C,i8", 0, NULL}, // 0x38
+    {"ADD HL,SP", 0, NULL}, // 0x39
+    {"LD A,(HL-)", 0, NULL}, // 0x3A
+    {"DEC SP", 0, NULL}, // 0x3B
+    {"INC A", 0, NULL}, // 0x3C
+    {"DEC A", 0, NULL}, // 0x3D
+    {"LD A,u8", 0, NULL}, // 0x3E
+    {"CCF", 0, NULL}, // 0x3F
     {"???", 0, NULL}, // 0x40
     {"???", 0, NULL}, // 0x41
     {"???", 0, NULL}, // 0x42
@@ -198,7 +198,7 @@ const gb_cpu_instruction instructions[256] = {
     {"???", 0, NULL}, // 0xC0
     {"???", 0, NULL}, // 0xC1
     {"???", 0, NULL}, // 0xC2
-    {"???", 0, NULL}, // 0xC3
+    {"JP u16", 0, cpu_jp_u16}, // 0xC3
     {"???", 0, NULL}, // 0xC4
     {"???", 0, NULL}, // 0xC5
     {"???", 0, NULL}, // 0xC6
@@ -208,7 +208,7 @@ const gb_cpu_instruction instructions[256] = {
     {"???", 0, NULL}, // 0xCA
     {"???", 0, NULL}, // 0xCB
     {"???", 0, NULL}, // 0xCC
-    {"???", 0, NULL}, // 0xCD
+    {"CALL u16", 0, NULL}, // 0xCD
     {"???", 0, NULL}, // 0xCE
     {"???", 0, NULL}, // 0xCF
     {"???", 0, NULL}, // 0xD0
