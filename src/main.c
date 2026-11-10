@@ -1,18 +1,16 @@
-#include "cart.h"
-#include "cpu.h"
-
-const char* rom_path = "roms/links-awakening.gb";
+#include "emulator_core.h"
 
 int main()
 {
-    if (cart_load(rom_path))
+    int init_status = core_init();
+    if (init_status != 0)
     {
-        cart_print_info();
+        return init_status;
     }
 
-    cpu_reset();
-    cpu_fetch_instruction();
-    cpu_execute_instruction();
+    core_run();
+
+    core_shutdown();
 
     return 0;
 }

@@ -2,6 +2,7 @@
 #define CPU_H
 
 #include <stdint.h>
+#include <stdbool.h>
 
 typedef struct {
     union {
@@ -49,6 +50,6 @@ extern gb_cpu_registers cpu_registers;
 
 void cpu_reset();
 void cpu_fetch_instruction();
-void cpu_execute_instruction();
+bool cpu_execute_instruction();
 
 #endif // CPU_H
