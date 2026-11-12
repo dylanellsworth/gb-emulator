@@ -178,7 +178,7 @@ const gb_cpu_instruction instructions[256] = {
     {"XOR A,H", 0, NULL}, // 0xAC
     {"XOR A,L", 0, NULL}, // 0xAD
     {"XOR A,(HL)", 0, NULL}, // 0xAE
-    {"XOR A,A", 0, NULL}, // 0xAF
+    {"XOR A,A", 0, cpu_xor_a}, // 0xAF
     {"OR A,B", 0, NULL}, // 0xB0
     {"OR A,C", 0, NULL}, // 0xB1
     {"OR A,D", 0, NULL}, // 0xB2

@@ -66,3 +66,13 @@ void cpu_jp_u16()
     cpu_registers.pc = temp;
     core_advance_clocks(4);
 }
+
+void cpu_xor_a()
+{
+    cpu_registers.a = 0;
+    SET_FLAG_SUBTRACT(0);
+    SET_FLAG_CARRY(0);
+    SET_FLAG_HALF_CARRY(0);
+    SET_FLAG_ZERO(1);
+    core_advance_clocks(4);
+}

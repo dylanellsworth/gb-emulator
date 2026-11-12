@@ -4,6 +4,15 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+#define SET_FLAG_ZERO(value)        cpu_registers.f = (cpu_registers.f & ~(1UL << 7)) | ((value) << 7);
+#define GET_FLAG_ZERO               ((cpu_registers.f & ~(1UL << 7)) >> 7)
+#define SET_FLAG_SUBTRACT(value)    cpu_registers.f = (cpu_registers.f & ~(1UL << 7)) | ((value) << 6);
+#define GET_FLAG_SUBTRACT           ((cpu_registers.f & ~(1UL << 7)) >> 6)
+#define SET_FLAG_HALF_CARRY(value)  cpu_registers.f = (cpu_registers.f & ~(1UL << 7)) | ((value) << 5);
+#define GET_FLAG_HALF_CARRY         ((cpu_registers.f & ~(1UL << 7)) >> 5)
+#define SET_FLAG_CARRY(value)       cpu_registers.f = (cpu_registers.f & ~(1UL << 7)) | ((value) << 4);
+#define GET_FLAG_CARRY              ((cpu_registers.f & ~(1UL << 7)) >> 4)
+
 typedef struct {
     union {
         struct {
@@ -54,6 +63,7 @@ bool cpu_execute_instruction();
 
 // CPU Operations
 void cpu_noop(); // 0x00
-void cpu_jp_u16(); //C3
+void cpu_jp_u16(); //0xC3
+void cpu_xor_a(); // 0xAF
 
 #endif // CPU_H
