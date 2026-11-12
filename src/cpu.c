@@ -1,5 +1,6 @@
 #include "cpu.h"
 #include "cpu_instructions.h"
+#include "cpu_routines.h"
 #include "emulator_core.h"
 #include "memory_bus.h"
 #include <stddef.h>
@@ -51,6 +52,21 @@ void cpu_noop()
     core_advance_clocks(4);
 }
 
+void cpu_ld_hl_u16()
+{
+    cpu_routine_ld_16(cpu_registers.h, cpu_registers.l);
+}
+
+void cpu_xor_a()
+{
+    cpu_registers.a = 0;
+    SET_FLAG_SUBTRACT(0);
+    SET_FLAG_CARRY(0);
+    SET_FLAG_HALF_CARRY(0);
+    SET_FLAG_ZERO(1);
+    core_advance_clocks(4);
+}
+
 void cpu_jp_u16()
 {
     core_advance_clocks(4);
@@ -64,15 +80,5 @@ void cpu_jp_u16()
     core_advance_clocks(4);
     // Set PC to jump address
     cpu_registers.pc = temp;
-    core_advance_clocks(4);
-}
-
-void cpu_xor_a()
-{
-    cpu_registers.a = 0;
-    SET_FLAG_SUBTRACT(0);
-    SET_FLAG_CARRY(0);
-    SET_FLAG_HALF_CARRY(0);
-    SET_FLAG_ZERO(1);
     core_advance_clocks(4);
 }

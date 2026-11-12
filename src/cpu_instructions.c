@@ -36,7 +36,7 @@ const gb_cpu_instruction instructions[256] = {
     {"LD E,u8", 1, NULL}, // 0x1E
     {"RRA", 0, NULL}, // 0x1F
     {"JR NZ,i8", 1, NULL}, // 0x20
-    {"LD HL,u16", 0, NULL}, // 0x21
+    {"LD HL,u16", 0, cpu_ld_hl_u16}, // 0x21
     {"LD (HL+),A", 0, NULL}, // 0x22
     {"INC HL", 0, NULL}, // 0x23
     {"INC H", 0, NULL}, // 0x24

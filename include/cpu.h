@@ -62,8 +62,9 @@ void cpu_fetch_instruction();
 bool cpu_execute_instruction();
 
 // CPU Operations
-void cpu_noop(); // 0x00
-void cpu_jp_u16(); //0xC3
-void cpu_xor_a(); // 0xAF
+void cpu_noop();      // 0x00
+void cpu_ld_hl_u16(); // 0x21
+void cpu_xor_a();     // 0xAF
+void cpu_jp_u16();    // 0xC3
 
 #endif // CPU_H
