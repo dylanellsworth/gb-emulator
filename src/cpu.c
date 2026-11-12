@@ -1,7 +1,7 @@
 #include "cpu.h"
 #include "cpu_instructions.h"
 #include "emulator_core.h"
-#include "cart.h"
+#include "memory_bus.h"
 #include <stddef.h>
 #include <stdio.h>
 
@@ -24,7 +24,7 @@ void cpu_reset()
 void cpu_fetch_instruction()
 {
     // TODO: Read from memory bus instead of directly from ROM data
-    cpu_current_op_code = cartridge_data[cpu_registers.pc++];
+    cpu_current_op_code = memory_bus_read(cpu_registers.pc++);
     const gb_cpu_instruction* instruction = &instructions[cpu_current_op_code];
     cpu_current_instruction_execute = instruction->execute;
 }
@@ -55,11 +55,11 @@ void cpu_jp_u16()
 {
     core_advance_clocks(4);
     // Get jump address MSB
-    uint32_t temp = cartridge_data[cpu_registers.pc++];
+    uint32_t temp = memory_bus_read(cpu_registers.pc++);
     cpu_registers.pc &= 0xFFFF;
     core_advance_clocks(4);
     // get jump address LSB
-    temp |= ((uint32_t)cartridge_data[cpu_registers.pc++]) << 8;
+    temp |= ((uint32_t)memory_bus_read(cpu_registers.pc++)) << 8;
     cpu_registers.pc &= 0xFFFF;
     core_advance_clocks(4);
     // Set PC to jump address
