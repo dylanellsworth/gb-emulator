@@ -9,6 +9,6 @@ int core_init();
 void core_run();
 void core_shutdown();
 
-void core_advance_clocks(uint8_t clocks);
+void core_advance_clocks(uint8_t ticks);
 
 #endif

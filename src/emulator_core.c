@@ -2,7 +2,7 @@
 #include "cart.h"
 #include "cpu.h"
 
-const char* rom_path = "roms/test-rom.gb";
+const char* rom_path = "roms/links-awakening.gb";
 
 uint32_t core_clock_counter = 0;
 bool core_quit_requested = false;
@@ -37,7 +37,7 @@ void core_shutdown()
 {
 }
 
-void core_advance_clocks(uint8_t clocks)
+void core_advance_clocks(uint8_t ticks)
 {
-    core_clock_counter += clocks;
+    core_clock_counter += ticks;
 }
