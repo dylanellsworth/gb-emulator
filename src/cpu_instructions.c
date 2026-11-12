@@ -131,132 +131,132 @@ const gb_cpu_instruction instructions[256] = {
     {"LD A,L", 0, NULL}, // 0x7D
     {"LD A,(HL)", 0, NULL}, // 0x7E
     {"LD A,A", 0, NULL}, // 0x7F
-    {"???", 0, NULL}, // 0x80
-    {"???", 0, NULL}, // 0x81
-    {"???", 0, NULL}, // 0x82
-    {"???", 0, NULL}, // 0x83
-    {"???", 0, NULL}, // 0x84
-    {"???", 0, NULL}, // 0x85
-    {"???", 0, NULL}, // 0x86
-    {"???", 0, NULL}, // 0x87
-    {"???", 0, NULL}, // 0x88
-    {"???", 0, NULL}, // 0x89
-    {"???", 0, NULL}, // 0x8A
-    {"???", 0, NULL}, // 0x8B
-    {"???", 0, NULL}, // 0x8C
-    {"???", 0, NULL}, // 0x8D
-    {"???", 0, NULL}, // 0x8E
-    {"???", 0, NULL}, // 0x8F
-    {"???", 0, NULL}, // 0x90
-    {"???", 0, NULL}, // 0x91
-    {"???", 0, NULL}, // 0x92
-    {"???", 0, NULL}, // 0x93
-    {"???", 0, NULL}, // 0x94
-    {"???", 0, NULL}, // 0x95
-    {"???", 0, NULL}, // 0x96
-    {"???", 0, NULL}, // 0x97
-    {"???", 0, NULL}, // 0x98
-    {"???", 0, NULL}, // 0x99
-    {"???", 0, NULL}, // 0x9A
-    {"???", 0, NULL}, // 0x9B
-    {"???", 0, NULL}, // 0x9C
-    {"???", 0, NULL}, // 0x9D
-    {"???", 0, NULL}, // 0x9E
-    {"???", 0, NULL}, // 0x9F
-    {"???", 0, NULL}, // 0xA0
-    {"???", 0, NULL}, // 0xA1
-    {"???", 0, NULL}, // 0xA2
-    {"???", 0, NULL}, // 0xA3
-    {"???", 0, NULL}, // 0xA4
-    {"???", 0, NULL}, // 0xA5
-    {"???", 0, NULL}, // 0xA6
-    {"???", 0, NULL}, // 0xA7
-    {"???", 0, NULL}, // 0xA8
-    {"???", 0, NULL}, // 0xA9
-    {"???", 0, NULL}, // 0xAA
-    {"???", 0, NULL}, // 0xAB
-    {"???", 0, NULL}, // 0xAC
-    {"???", 0, NULL}, // 0xAD
-    {"???", 0, NULL}, // 0xAE
-    {"???", 0, NULL}, // 0xAF
-    {"???", 0, NULL}, // 0xB0
-    {"???", 0, NULL}, // 0xB1
-    {"???", 0, NULL}, // 0xB2
-    {"???", 0, NULL}, // 0xB3
-    {"???", 0, NULL}, // 0xB4
-    {"???", 0, NULL}, // 0xB5
-    {"???", 0, NULL}, // 0xB6
-    {"???", 0, NULL}, // 0xB7
-    {"???", 0, NULL}, // 0xB8
-    {"???", 0, NULL}, // 0xB9
-    {"???", 0, NULL}, // 0xBA
-    {"???", 0, NULL}, // 0xBB
-    {"???", 0, NULL}, // 0xBC
-    {"???", 0, NULL}, // 0xBD
-    {"???", 0, NULL}, // 0xBE
-    {"???", 0, NULL}, // 0xBF
-    {"???", 0, NULL}, // 0xC0
-    {"???", 0, NULL}, // 0xC1
-    {"???", 0, NULL}, // 0xC2
-    {"JP u16", 0, cpu_jp_u16}, // 0xC3
-    {"???", 0, NULL}, // 0xC4
-    {"???", 0, NULL}, // 0xC5
-    {"???", 0, NULL}, // 0xC6
-    {"???", 0, NULL}, // 0xC7
-    {"???", 0, NULL}, // 0xC8
-    {"???", 0, NULL}, // 0xC9
-    {"???", 0, NULL}, // 0xCA
-    {"???", 0, NULL}, // 0xCB
-    {"???", 0, NULL}, // 0xCC
-    {"CALL u16", 0, NULL}, // 0xCD
-    {"???", 0, NULL}, // 0xCE
-    {"???", 0, NULL}, // 0xCF
-    {"???", 0, NULL}, // 0xD0
-    {"???", 0, NULL}, // 0xD1
-    {"???", 0, NULL}, // 0xD2
-    {"???", 0, NULL}, // 0xD3
-    {"???", 0, NULL}, // 0xD4
-    {"???", 0, NULL}, // 0xD5
-    {"???", 0, NULL}, // 0xD6
-    {"???", 0, NULL}, // 0xD7
-    {"???", 0, NULL}, // 0xD8
-    {"???", 0, NULL}, // 0xD9
-    {"???", 0, NULL}, // 0xDA
-    {"???", 0, NULL}, // 0xDB
-    {"???", 0, NULL}, // 0xDC
-    {"???", 0, NULL}, // 0xDD
-    {"???", 0, NULL}, // 0xDE
-    {"???", 0, NULL}, // 0xDF
-    {"???", 0, NULL}, // 0xE0
-    {"???", 0, NULL}, // 0xE1
-    {"???", 0, NULL}, // 0xE2
-    {"???", 0, NULL}, // 0xE3
-    {"???", 0, NULL}, // 0xE4
-    {"???", 0, NULL}, // 0xE5
-    {"???", 0, NULL}, // 0xE6
-    {"???", 0, NULL}, // 0xE7
-    {"???", 0, NULL}, // 0xE8
-    {"???", 0, NULL}, // 0xE9
-    {"???", 0, NULL}, // 0xEA
-    {"???", 0, NULL}, // 0xEB
-    {"???", 0, NULL}, // 0xEC
-    {"???", 0, NULL}, // 0xED
-    {"???", 0, NULL}, // 0xEE
-    {"???", 0, NULL}, // 0xEF
-    {"???", 0, NULL}, // 0xF0
-    {"???", 0, NULL}, // 0xF1
-    {"???", 0, NULL}, // 0xF2
-    {"???", 0, NULL}, // 0xF3
-    {"???", 0, NULL}, // 0xF4
-    {"???", 0, NULL}, // 0xF5
-    {"???", 0, NULL}, // 0xF6
-    {"???", 0, NULL}, // 0xF7
-    {"???", 0, NULL}, // 0xF8
-    {"???", 0, NULL}, // 0xF9
-    {"???", 0, NULL}, // 0xFA
-    {"???", 0, NULL}, // 0xFB
-    {"???", 0, NULL}, // 0xFC
-    {"???", 0, NULL}, // 0xFD
-    {"???", 0, NULL}, // 0xFE
-    {"???", 0, NULL}  // 0xFF
+    {"ADD A,B", 0, NULL}, // 0x80
+    {"ADD A,C", 0, NULL}, // 0x81
+    {"ADD. A,D", 0, NULL}, // 0x82
+    {"ADD A,E", 0, NULL}, // 0x83
+    {"ADD A,H", 0, NULL}, // 0x84
+    {"ADD A,L", 0, NULL}, // 0x85
+    {"ADD A,(HL)", 0, NULL}, // 0x86
+    {"ADD A,A", 0, NULL}, // 0x87
+    {"ADC A,B", 0, NULL}, // 0x88
+    {"ADC A,C", 0, NULL}, // 0x89
+    {"ADC A,D", 0, NULL}, // 0x8A
+    {"ADC A,E", 0, NULL}, // 0x8B
+    {"ADC A,H", 0, NULL}, // 0x8C
+    {"ADC A,L", 0, NULL}, // 0x8D
+    {"ADC A,(HL)", 0, NULL}, // 0x8E
+    {"ADC A,A", 0, NULL}, // 0x8F
+    {"SUB A,B", 0, NULL}, // 0x90
+    {"SUB A,C", 0, NULL}, // 0x91
+    {"SUB A,D", 0, NULL}, // 0x92
+    {"SUB A,E", 0, NULL}, // 0x93
+    {"SUB A,H", 0, NULL}, // 0x94
+    {"SUB A,L", 0, NULL}, // 0x95
+    {"SUB A,(HL)", 0, NULL}, // 0x96
+    {"SUB A,A", 0, NULL}, // 0x97
+    {"SBC A,B", 0, NULL}, // 0x98
+    {"SBC A,C", 0, NULL}, // 0x99
+    {"SBC A,D", 0, NULL}, // 0x9A
+    {"SBC A,E", 0, NULL}, // 0x9B
+    {"SBC A,H", 0, NULL}, // 0x9C
+    {"SBC A,L", 0, NULL}, // 0x9D
+    {"SBC A,(HL)", 0, NULL}, // 0x9E
+    {"SBC A,A", 0, NULL}, // 0x9F
+    {"AND A,B", 0, NULL}, // 0xA0
+    {"AND A,C", 0, NULL}, // 0xA1
+    {"AND A,D", 0, NULL}, // 0xA2
+    {"AND A,E", 0, NULL}, // 0xA3
+    {"AND A,H", 0, NULL}, // 0xA4
+    {"AND A,L", 0, NULL}, // 0xA5
+    {"AND A,(HL)", 0, NULL}, // 0xA6
+    {"AND A,A", 0, NULL}, // 0xA7
+    {"XOR A,B", 0, NULL}, // 0xA8
+    {"XOR A,C", 0, NULL}, // 0xA9
+    {"XOR A,D", 0, NULL}, // 0xAA
+    {"XOR A,E", 0, NULL}, // 0xAB
+    {"XOR A,H", 0, NULL}, // 0xAC
+    {"XOR A,L", 0, NULL}, // 0xAD
+    {"XOR A,(HL)", 0, NULL}, // 0xAE
+    {"XOR A,A", 0, NULL}, // 0xAF
+    {"OR A,B", 0, NULL}, // 0xB0
+    {"OR A,C", 0, NULL}, // 0xB1
+    {"OR A,D", 0, NULL}, // 0xB2
+    {"OR A,E", 0, NULL}, // 0xB3
+    {"OR A,H", 0, NULL}, // 0xB4
+    {"OR A,L", 0, NULL}, // 0xB5
+    {"OR A,(HL)", 0, NULL}, // 0xB6
+    {"OR A,A", 0, NULL}, // 0xB7
+    {"CP A,B", 0, NULL}, // 0xB8
+    {"CP A,C", 0, NULL}, // 0xB9
+    {"CP A,D", 0, NULL}, // 0xBA
+    {"CP A,E", 0, NULL}, // 0xBB
+    {"CP A,H", 0, NULL}, // 0xBC
+    {"CP A,L", 0, NULL}, // 0xBD
+    {"CP A (HL)", 0, NULL}, // 0xBE
+    {"CP A,A", 0, NULL}, // 0xBF
+    {"RET NZ", 0, NULL}, // 0xC0
+    {"POP BC", 0, NULL}, // 0xC1
+    {"JP NZ,u16", 2, NULL}, // 0xC2
+    {"JP u16", 2, cpu_jp_u16}, // 0xC3
+    {"CALL NZ,u16", 2, NULL}, // 0xC4
+    {"PUSH BC", 0, NULL}, // 0xC5
+    {"ADD A,u8", 1, NULL}, // 0xC6
+    {"RST 00h", 0, NULL}, // 0xC7
+    {"RET Z", 0, NULL}, // 0xC8
+    {"RET", 0, NULL}, // 0xC9
+    {"JP Z,u16", 2, NULL}, // 0xCA
+    {"PREFIX CB", 0, NULL}, // 0xCB
+    {"CALL Z,u16", 2, NULL}, // 0xCC
+    {"CALL u16", 2, NULL}, // 0xCD
+    {"ADC A,u8", 1, NULL}, // 0xCE
+    {"RST 08h", 0, NULL}, // 0xCF
+    {"RET NC", 0, NULL}, // 0xD0
+    {"POP DE", 0, NULL}, // 0xD1
+    {"JP NC,u16", 0, NULL}, // 0xD2
+    {"INVALID", 0, NULL}, // 0xD3
+    {"CALL NC,u16", 2, NULL}, // 0xD4
+    {"PUSH DE", 0, NULL}, // 0xD5
+    {"SUB A,u8", 1, NULL}, // 0xD6
+    {"RST 10h", 0, NULL}, // 0xD7
+    {"RET C", 0, NULL}, // 0xD8
+    {"RETI", 0, NULL}, // 0xD9
+    {"JP C,u16", 2, NULL}, // 0xDA
+    {"INVALID", 0, NULL}, // 0xDB
+    {"CALL C,u16", 2, NULL}, // 0xDC
+    {"INVALID", 0, NULL}, // 0xDD
+    {"SBC A,u8", 1, NULL}, // 0xDE
+    {"RST 18h", 0, NULL}, // 0xDF
+    {"LD (FF00+u8),A", 0, NULL}, // 0xE0
+    {"POP HL", 0, NULL}, // 0xE1
+    {"LD (FF00+C),A", 0, NULL}, // 0xE2
+    {"INVALID", 0, NULL}, // 0xE3
+    {"INVALID", 0, NULL}, // 0xE4
+    {"PUSH HL", 0, NULL}, // 0xE5
+    {"AND A,u8", 0, NULL}, // 0xE6
+    {"RST 20h", 0, NULL}, // 0xE7
+    {"ADD SP,i8", 1, NULL}, // 0xE8
+    {"JP HL", 0, NULL}, // 0xE9
+    {"LD (u16), A", 1, NULL}, // 0xEA
+    {"INVALID", 0, NULL}, // 0xEB
+    {"INVALID", 0, NULL}, // 0xEC
+    {"INVALID", 0, NULL}, // 0xED
+    {"XOR A,u8", 1, NULL}, // 0xEE
+    {"RST 28h", 0, NULL}, // 0xEF
+    {"LD A,(FF00+u8)", 0, NULL}, // 0xF0
+    {"POP AF", 0, NULL}, // 0xF1
+    {"LD A,(FF00+C)", 0, NULL}, // 0xF2
+    {"DI", 0, NULL}, // 0xF3
+    {"INVALID", 0, NULL}, // 0xF4
+    {"PUSH AF", 0, NULL}, // 0xF5
+    {"OR A,u8", 0, NULL}, // 0xF6
+    {"RST 30h", 0, NULL}, // 0xF7
+    {"LD HL,SP+i8", 1, NULL}, // 0xF8
+    {"LD SP,HL", 0, NULL}, // 0xF9
+    {"LD A,(u16)", 2, NULL}, // 0xFA
+    {"EI", 0, NULL}, // 0xFB
+    {"INVALID", 0, NULL}, // 0xFC
+    {"INVALID", 0, NULL}, // 0xFD
+    {"CP A,u8", 1, NULL}, // 0xFE
+    {"RST 38h", 0, NULL}  // 0xFF
 };
