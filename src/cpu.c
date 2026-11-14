@@ -47,17 +47,45 @@ bool cpu_execute_instruction()
     return true;
 }
 
-void cpu_noop()
+void cpu_noop() // 0x00
 {
     core_advance_clocks(4);
 }
 
-void cpu_ld_hl_u16()
+void cpu_dec_b() //0x05
+{
+    cpu_routine_dec_8(cpu_registers.b);
+}
+
+void cpu_ld_b_u8() // 0x06
+{
+    cpu_routine_ld_8(cpu_registers.b);
+}
+
+void cpu_ld_c_u8() // 0x0E
+{
+    cpu_routine_ld_8(cpu_registers.c);
+}
+
+void cpu_jr_nz_i8() // 0x20
+{
+    cpu_routine_jr_conditional_n(GET_FLAG_ZERO == 0);
+}
+
+void cpu_ld_hl_u16() // 0x21
 {
     cpu_routine_ld_16(cpu_registers.h, cpu_registers.l);
 }
 
-void cpu_xor_a()
+void cpu_ldd_hl_a() // 0x32
+{
+	core_advance_clocks(4);
+	memory_bus_write(cpu_registers.hl, cpu_registers.a);
+	cpu_registers.hl = (cpu_registers.hl - 1) & 0xFFFF;
+	core_advance_clocks(4);
+}
+
+void cpu_xor_a() // 0xAF
 {
     cpu_registers.a = 0;
     SET_FLAG_SUBTRACT(0);
@@ -67,7 +95,7 @@ void cpu_xor_a()
     core_advance_clocks(4);
 }
 
-void cpu_jp_u16()
+void cpu_jp_u16() // 0xC3
 {
     core_advance_clocks(4);
     // Get jump address MSB

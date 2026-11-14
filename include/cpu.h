@@ -63,7 +63,12 @@ bool cpu_execute_instruction();
 
 // CPU Operations
 void cpu_noop();      // 0x00
+void cpu_dec_b();     // 0x05
+void cpu_ld_b_u8();   // 0x06
+void cpu_ld_c_u8();   // 0x0E
+void cpu_jr_nz_i8();  // 0x20
 void cpu_ld_hl_u16(); // 0x21
+void cpu_ldd_hl_a();  // 0x32
 void cpu_xor_a();     // 0xAF
 void cpu_jp_u16();    // 0xC3
 
