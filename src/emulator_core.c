@@ -2,12 +2,10 @@
 #include "cart.h"
 #include "cpu.h"
 
-const char* rom_path = "roms/links-awakening.gb";
-
 uint32_t core_clock_counter = 0;
 bool core_quit_requested = false;
 
-int core_init()
+int core_init(const char* rom_path)
 {
     if (!cart_load(rom_path))
     {
