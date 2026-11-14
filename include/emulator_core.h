@@ -5,7 +5,7 @@
 
 extern uint32_t core_clock_counter;
 
-int core_init();
+int core_init(const char* rom_path);
 void core_run();
 void core_shutdown();
 
